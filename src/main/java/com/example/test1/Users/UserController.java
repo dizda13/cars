@@ -17,15 +17,15 @@ public class UserController {
     UserController() {}
 
     @PostMapping("/users/sign-up")
-    public ResponseEntity signUp(@RequestBody User user) {
+    public ResponseEntity signUp(@RequestBody Account user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         usersRepository.save(user);
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @PostMapping("/users/sign-in")
-    public Object signIn(@RequestBody User userCredencials) {
-        User user = usersRepository.findByUsername(userCredencials.getUsername());
+    public Object signIn(@RequestBody Account userCredencials) {
+        Account user = usersRepository.findByUsername(userCredencials.getUsername());
         if (user.getPassword() == user.getPassword()) {
             return new ResponseEntity(HttpStatus.OK);
         }

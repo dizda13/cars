@@ -1,13 +1,5 @@
 package com.example.test1.Cars;
 
-import com.example.test1.Locations.Location;
-import com.example.test1.Locations.LocationRepository;
-import com.example.test1.Users.User;
-import com.example.test1.Users.UsersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Optional;
-
 public class CarsApiModel {
 
     private Long id;

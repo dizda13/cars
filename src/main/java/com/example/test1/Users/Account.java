@@ -7,10 +7,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class User {
+public class Account {
 
     @javax.persistence.Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
     @NotNull
     private String username;

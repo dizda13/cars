@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 public class Location {
 
     @javax.persistence.Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
     @NotNull
     private int zipCode;

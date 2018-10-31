@@ -2,7 +2,7 @@ package com.example.test1.Cars;
 
 import com.example.test1.Image.Image;
 import com.example.test1.Locations.Location;
-import com.example.test1.Users.User;
+import com.example.test1.Users.Account;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -31,7 +31,7 @@ public class Car {
 
     @JoinColumn(nullable=false)
     @ManyToOne
-    private User user;
+    private Account user;
 
     @JoinColumn(nullable=false)
     @ManyToOne
@@ -92,11 +92,11 @@ public class Car {
         this.power = power;
     }
 
-    public User getUser() {
+    public Account getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Account user) {
         this.user = user;
     }
 
